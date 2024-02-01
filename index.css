@@ -1,4 +1,8 @@
-.box {
+.box-one, 
+.box-two,
+.box-three,
+.box-four, 
+.box-five {
   width: 50px;
   height: 50px;
   background: red;
@@ -7,14 +11,96 @@
   animation-duration: 1s;
   animation-delay: 1s;
   animation-iteration-count: 4; */
+}
 
-  
-
-  animation: grow 1s ease-in infinite alternate; 
+.box-one {
+  /*animation: grow 1s ease-in infinite alternate;
   /*set the fill-mode if the iteration count is a finite number*/
 }
 
+.box-two {
+  top: 50%; 
+  left: 50%; 
+  position: fixed;
+  transform: translate(-50%, -50%);
+  /*animation-name: transform-two;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  */
+}
+
+.box-three {
+  top: 50%;
+  left: 75%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  /* animation-name: transform-three;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+}
+
+.box-four {
+  top: 50%;
+  right: 75%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  /* animation-name: transform-four;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;  */
+}
+
+.box-five {
+  top: 75%;
+  right: 75%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  /* animation-name: transform-five;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;  */
+}
+
+.box-six {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: blue;
+  border: 1px solid black;
+  position: fixed;
+  animation-name: transform-six;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+ 
+}
+
+/* for box 1 */
 @keyframes grow {
   from {width: 100px; height: 100px; background: blue;}
   to {width: 10px; height: 10px; background: red;}
+}
+
+/* for box 2 */
+@keyframes transform-two {
+  100% {transform: scale(2,4);}
+}
+
+/* for box 3 */
+@keyframes transform-three {
+  100% {transform: translate(50%, 25%)}
+}
+
+/* for box 4 */
+@keyframes transform-four {
+  100% {transform: rotate(-180deg);}
+}
+
+/* for box 5: skew*/
+@keyframes transform-five {
+  100% {transform: skewX(50deg);}
+}
+
+/* transform challenge */
+@keyframes transform-six {
+  100% {transform: scale(0.5, 0.5) translateX(50px) rotate(45deg)}
 }
